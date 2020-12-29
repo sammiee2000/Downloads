@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 3.5.0">
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        severity="Warning"
+        message="Lint found an issue registry (`androidx.appcompat.AppCompatIssueRegistry`) which requires a newer API level. That means that the custom lint checks are intended for a newer lint version; please upgrade"
+        category="Lint"
+        priority="10"
+        summary="Obsolete custom lint check"
+        explanation="Lint can be extended with &quot;custom checks&quot;: additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.&#xA;&#xA;The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.&#xA;&#xA;This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.&#xA;&#xA;It may also flag issues found to be using a **newer** version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks.">
+        <location
+            file="C:\Users\Asir\.gradle\caches\transforms-2\files-2.1\95c9f8feda74a14b9a8fdf15c014ce5e\appcompat-1.2.0\jars\lint.jar"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html as well as follow this guide:&#xA;https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        url="https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        urls="https://developer.android.com/distribute/best-practices/develop/target-sdk.html,http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 29"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\build.gradle"
+            line="25"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.margin_tiny` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;dimen name=&quot;margin_tiny&quot;>4dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\dimens.xml"
+            line="23"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.margin_small` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;dimen name=&quot;margin_small&quot;>8dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\dimens.xml"
+            line="24"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.margin_medium` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;dimen name=&quot;margin_medium&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\dimens.xml"
+            line="25"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.margin_large` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;dimen name=&quot;margin_large&quot;>32dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\dimens.xml"
+            line="26"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.margin_huge` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;dimen name=&quot;margin_huge&quot;>64dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\dimens.xml"
+            line="27"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.horizontal_page_margin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;dimen name=&quot;horizontal_page_margin&quot;>@dimen/margin_medium&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\dimens.xml"
+            line="31"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.vertical_page_margin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;dimen name=&quot;vertical_page_margin&quot;>@dimen/margin_medium&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\dimens.xml"
+            line="32"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.intro_message` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;string name=&quot;intro_message&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\strings.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.Widget` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;style name=&quot;Widget&quot; />"
+        errorLine2="           ~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\styles.xml"
+            line="33"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.Widget_SampleMessage` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;style name=&quot;Widget.SampleMessage&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\styles.xml"
+            line="35"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.style.Widget_SampleMessageTile` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;style name=&quot;Widget.SampleMessageTile&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\values\styles.xml"
+            line="40"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.tile` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true.">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\drawable-hdpi\tile.9.png"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-mdpi`: tile.9.png (found in drawable-hdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\drawable-mdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-xhdpi`: tile.9.png (found in drawable-hdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\drawable-xhdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-xxhdpi`: tile.9.png (found in drawable-hdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\drawable-xxhdpi"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="C:\Users\Asir\AndroidStudioProjects\ActivitySceneTransitionBasic\app\src\main\res\layout\details.xml"
+            line="31"
+            column="14"/>
+    </issue>
+
+</issues>
